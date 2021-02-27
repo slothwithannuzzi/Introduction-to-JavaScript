@@ -19,10 +19,14 @@ Do the following:
 */
 
 let age = 19;
-if (age >= 18) {
-  console.log('true');
-} else {
-  console.log('false')
+function ofAge () {
+   if (age >= 18) {
+   console.log('true');
+    return true;
+  } else {
+    console.log('false')
+    return false;
+  }
 }
 
 /*
