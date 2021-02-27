@@ -18,16 +18,14 @@ Do the following:
    HINT: no function required
 */
 
-let age = 19;
-function ofAge () {
-   if (age >= 18) {
+let votingAge = 19;
+
+   if (votingAge >= 18) {
    console.log('true');
-    return true;
-  } else {
-    console.log('false')
-    return false;
+  } 
+    else {
+    console.log('false');
   }
-}
 
 /*
 Task 1b - Values
@@ -40,7 +38,14 @@ Do the following:
    HINT: no function required
 */
 
+let var1 = 2;
+let var2 = 5;
 
+if (var2 <=5) {
+  var1 = 3;
+}
+
+console.log(var1);
 
 
 
