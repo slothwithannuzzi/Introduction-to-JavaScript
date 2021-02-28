@@ -60,7 +60,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+string year = "1999";
+int yearNum = parseInt(year);
+console.log(yearNum);
 
 
 /*
@@ -72,8 +74,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -88,9 +90,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(num){
+    return num * 7;
 }
+
+console.log(dogYears(4));
 
 
 
@@ -121,10 +125,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogAge, dogWeight){
+  if (dogAge >= 1) {
+    if(dogWeight <= 5) {
+      return dogWeight * .05;
+    } else if(dogWeight <= 10){
+      return dogWeight * .04;
+    } else if(dogWeight <= 15){
+      return dogWeight * .03;
+    } else {
+      return dogWeight * .02;
+    }
+  } else {
+    if(dogAge >= .16 && dogAge <= .33) {
+      return dogWeight * .1;
+    } else if(dogAge <= .5833) {
+      return dogWeight * .05;
+    } else {
+      return dogWeight *.04;
+    }
   }
+}
 
+console.log(hungryDog(1, 15));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -147,10 +170,47 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
 function game(user, computer){
-    /*add your code here*/
+
+  if(user === "rock" || user === "Rock") {
+    
+    if (computer <= .25) {
+      console.log("It's a Tie");
+    } else if(computer >.25 && computer <= .5) {
+      console.log("You Lose!")
+    } else {
+      console.log("You Win!")
+    }
+
+  } else if(user === "paper" || user === "Paper") {
+    
+    if (computer <= .25) {
+      console.log("You Win!");
+    } else if(computer >.25 && computer <= .5) {
+      console.log("It's a Tie!")
+    } else {
+      console.log("You Lose!")
+    }
+
+  } else if(user === "scissors" || user === "Scissors") {
+  
+    if (computer <= .25) {
+      console.log("You Lose!");
+    } else if(computer >.25 && computer <= .5) {
+      console.log("You Win!")
+    } else {
+      console.log("It's a Tie!")
+    }
+
+  } else {
+    return "error, invalid entry";
+  }
+
 }
+
+game("rock", computer);
   
   
 
